@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+*
+    box-sizing: border-box
+    padding: 0
+body
+    height: 100vh
+    margin: 0
+    font-family: 'Lato',sans-serif
+    background-color: #FFDEE9
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    .music-container
+        background: #fff
+        border-radius: 15px
+        box-shadow: 0 20px 20px 0 rgba(252,169,169,0.6)
+
+        .music-info
+            display: flex
+            padding: 20px 30px 10px 
+            left: 20px
+            top: 0
+            margin: 100px 0
+            z-index: 10
+            background-color: rgba(255,255 ,255 ,0.5)
+            border-radius: 15px 15px 0 0
+
+            .image-container
+                position: relative
+                width: 110px
+
+                img
+                    width: inherit
+                    height: 110px
+                    border-radius: 50%
+                    object-fit: cover
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    animation: rotate 3s linear infinite
+                    animation-play-state: paused
+
+                    @keyframes rotate
+                     from
+                        transform: rotate(0deg)
+                     to
+                        transform: rotate(360deg)
+              
+                            
+            .image-container::after
+                content: ''
+                background-color: #fff
+                width: 20px
+                height: 20px
+                position: absolute
+                left: 50%
+                bottom: 50%
+                border-radius: 50%
+                transform: translate(-50%,-50%)
+            
+    .music-container.play
+        .image-container
+            img
+                animation-play-state: running
+    .navigation
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+
+        .action-btn
+            background-color: #fff
+            border: 0
+            color: #dfdbdf
+            font-size: 20px
+            cursor: pointer
+            padding: 10px
+            margin: 0 20px
+        .action-btn:focus
+            outline: 0
+        .action-btn-big
+            color: #cdc2d0
+            font-size: 30px
+    
+
+
+    
+
+
